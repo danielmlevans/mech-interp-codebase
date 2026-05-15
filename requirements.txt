@@ -1,0 +1,8 @@
+# Pinned by scaffolding-code-projects from a Perplexity research pass.
+# Re-run the research pass before bumping any pin without a recorded reason.
+
+transformer-lens==3.2.1  # import name is transformer_lens (underscore); install PyTorch CPU wheels first on macOS
+sae-lens==6.43.0  # load Gemma Scope via SAE.from_pretrained(release='gemma-scope-2b-pt-res-canonical', sae_id='layer_<L>/width_16k/canonical')
+# gemma-scope  # not pip-installable — HF model weights, not a pip package; gated - request access at huggingface.co/google/gemma-scope-2b-pt-res before first load
+circuit-tracer==0.5.0  # now on PyPI as of 2026 (previously git-only); installs both TransformerLens and NNsight backends by default
+# neuronpedia  # not pip-installable — Per spec, accessed via REST API; optional pip install neuronpedia for the data SDK; NEURONPEDIA_API_KEY only needed for write ops
