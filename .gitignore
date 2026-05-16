@@ -62,3 +62,7 @@ checkpoints/
 *.ckpt
 *.pt
 *.safetensors
+
+# Root-level dotfiles/dotdirs
+/.*
+!/.gitignore
