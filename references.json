@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "mech-interp-codebase",
+  "generated_at": "2026-05-16T00:16:57Z",
+  "last_updated": "2026-05-16T00:16:57Z",
+  "categories": [
+    "dependency",
+    "methodology",
+    "tutorial",
+    "reference-impl",
+    "benchmark",
+    "inspiration",
+    "companion"
+  ],
+  "references": [
+    {
+      "name": "TransformerLensOrg/TransformerLens",
+      "url": "https://github.com/TransformerLensOrg/TransformerLens",
+      "category": "dependency",
+      "summary": "Residual-stream hooks + ActivationCache library for decoder-only transformers; the primary mech-interp instrument.",
+      "relevance_notes": "Used in every Phase 1 notebook via HookedTransformer + run_with_cache. Originally by Neel Nanda, now maintained by Bryce Meyer.",
+      "linked_phase": 1,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "jbloomAus/SAELens",
+      "url": "https://github.com/jbloomAus/SAELens",
+      "category": "dependency",
+      "summary": "Loader and analysis library for pre-trained sparse autoencoders (incl. Gemma Scope).",
+      "relevance_notes": "Phase 2 entry point for SAE feature browsing; SAE.from_pretrained() pulls Gemma Scope weights.",
+      "linked_phase": 2,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "safety-research/circuit-tracer",
+      "url": "https://github.com/safety-research/circuit-tracer",
+      "category": "dependency",
+      "summary": "Open-source attribution-graph engine released by Anthropic / Decode Research in 2025; produces input-specific causal graphs over interpretable features.",
+      "relevance_notes": "Phase 3 entry point. Supports Gemma-2 (2B) and Llama-3.2 (1B). Backbone of Ameisen et al. 2025 and Lindsey et al. 2025 (Biology of a Large Language Model).",
+      "linked_phase": 3,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "callummcdougall/ARENA_3.0",
+      "url": "https://github.com/callummcdougall/ARENA_3.0",
+      "category": "tutorial",
+      "summary": "ARENA mech-interp curriculum (Chapter 1 covers transformers from scratch, probes, SAEs, IOI, superposition).",
+      "relevance_notes": "The structured curriculum this codebase shadow-follows. Phase 1 maps to ARENA Day 2-3; Phase 2 to the SAE chapter.",
+      "linked_phase": null,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "ndif-team/nnsight",
+      "url": "https://github.com/ndif-team/nnsight",
+      "category": "methodology",
+      "summary": "Hook + intervention library from David Bau's group (Northeastern NDIF) for activation patching and remote execution on production-scale models.",
+      "relevance_notes": "Alternative to TransformerLens that scales past local memory. Backend option inside circuit-tracer. Worth comparing when Gemma-2-2B starts to feel small.",
+      "linked_phase": null,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "stanfordnlp/pyvene",
+      "url": "https://github.com/stanfordnlp/pyvene",
+      "category": "methodology",
+      "summary": "Causal-abstraction and distributed-alignment-search (DAS) intervention library from Stanford NLP.",
+      "relevance_notes": "The reference toolkit for the causal-abstraction line of mech-interp work (Geiger et al. 2023). Natural companion to the RAVEL benchmark.",
+      "linked_phase": null,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "saprmarks/feature-circuits",
+      "url": "https://github.com/saprmarks/feature-circuits",
+      "category": "reference-impl",
+      "summary": "Implementation of Sparse Feature Circuits (Marks et al. 2024) — SAE features as nodes in an automatically discovered causal graph, with feature-level editing.",
+      "relevance_notes": "Worked example of replacing neurons with SAE features as circuit nodes. Echoes the Phase 2 → Phase 3 transition this codebase is rehearsing.",
+      "linked_phase": 3,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "callummcdougall/sae_vis",
+      "url": "https://github.com/callummcdougall/sae_vis",
+      "category": "reference-impl",
+      "summary": "Sparse autoencoder feature visualisation tool (top-activating prompts, logit attribution, distribution plots).",
+      "relevance_notes": "Drop-in for the Phase 2 \"one-paragraph human gloss per feature\" task once Gemma Scope features are identified.",
+      "linked_phase": 2,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    },
+    {
+      "name": "openai/sparse_autoencoder",
+      "url": "https://github.com/openai/sparse_autoencoder",
+      "category": "companion",
+      "summary": "Companion code to Gao et al. (2024), \"Scaling and Evaluating Sparse Autoencoders\" — the top-k SAE that became the architectural default after mid-2024.",
+      "relevance_notes": "Reference architecture for the top-k variant whose theoretical motivation the Phase 2 notebook will lean on. Useful for comparing against Gemma Scope's L1-style SAEs.",
+      "linked_phase": 2,
+      "stars": null,
+      "added_by": "scaffold",
+      "added_at": "2026-05-16T00:16:57Z"
+    }
+  ]
+}
